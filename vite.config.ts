@@ -4,6 +4,9 @@ import { defineConfig } from "vite"
 
 export default defineConfig({
   plugins: [react()],
+  optimizeDeps: {
+    exclude: ['@ffmepeg/ffmepg', '@ffmepeg/util']
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
